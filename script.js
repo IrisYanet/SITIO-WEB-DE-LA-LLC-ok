@@ -6,6 +6,7 @@ en:{
 'hero.badge':'Bilingual Business Services — Holland, MI',
 'hero.title':'Your Trusted <em>Bilingual</em> Business Partner',
 'hero.slogan':'Your bilingual partner for precise bookkeeping, compliance, and growth in a diverse marketplace.',
+'hero.virtual.note':'Fully virtual services available nationwide with fast remote support.',
 'hero.cta1':'Free Consultation','hero.cta2':'Our Services',
 'hero.s1n':'5+','hero.s1l':'Service Areas','hero.s2n':'EN/ES','hero.s2l':'Bilingual Support','hero.s3n':'MI','hero.s3l':'Registered in Michigan',
 'hero.scroll':'Scroll',
@@ -15,11 +16,12 @@ en:{
 'mis.lbl':'Mission','mis.txt':'To empower Latino and American entrepreneurs in Michigan\'s diverse marketplace by delivering precise, accessible, and bilingual administrative and financial services — removing barriers and building bridges to sustainable success.',
 'vis.lbl':'Vision','vis.txt':'To become the most trusted bilingual business services partner in West Michigan, recognized for our commitment to excellence, cultural sensitivity, and the economic empowerment of diverse communities.',
 'svc.lbl':'What We Offer','svc.title':'Comprehensive Business Services','svc.sub':'Five specialized areas designed to support every stage of your business journey — from formation to growth.',
-'c1.title':'Corporate & Compliance','c1.sub':'Corporativo y Cumplimiento',
-'c2.title':'Financial & Bookkeeping','c2.sub':'Servicios Contables',
-'c3.title':'Gov Systems & Admin','c3.sub':'Sistemas Gubernamentales',
-'c4.title':'Strategy & Coaching','c4.sub':'Estrategia y Asesoría',
-'c5.title':'Digital & Content','c5.sub':'Digital y Contenido',
+'svc.alert':'Click each service header to view the services in that category.',
+'c1.title':'Corporate & Compliance','c1.sub':'Entity Setup & Legal Filings',
+'c2.title':'Financial & Bookkeeping','c2.sub':'Bookkeeping & Cost Control',
+'c3.title':'Gov Systems & Admin','c3.sub':'State & Federal Systems',
+'c4.title':'Strategy & Coaching','c4.sub':'Planning & Business Guidance',
+'c5.title':'Digital & Content','c5.sub':'Web & Content Support',
 's1.1.t':'LARA Michigan','s1.1.n':'LARA Michigan Entity Formation','s1.1.d':'Full setup including Articles of Organization and Operating Agreement templates.',
 's1.2.t':'IRS','s1.2.n':'EIN Procurement (IRS)','s1.2.d':'Fast acquisition of your Federal Tax ID.',
 's1.3.t':'FinCEN','s1.3.n':'BOI Reporting (FinCEN)','s1.3.d':'Initial Beneficial Ownership Information filing for federal compliance.',
@@ -48,7 +50,7 @@ en:{
 'ct.lbl':'Get In Touch','ct.title':'Let\'s Build Something Together','ct.sub':'Ready to take the next step? We\'re here to guide you through every process — in English or in Spanish.',
 'ct.loc.l':'Location','ct.loc.v':'Holland, Michigan, USA',
 'ct.ph.l':'Phone / WhatsApp','ct.ph.v':'+1 (616) 251-7351',
-'ct.em.l':'Email','ct.em.v':'info@godbookssolutions.com',
+'ct.em.l':'Email','ct.em.v':'<a href="mailto:iytalavera@godbooksolutions.com">iytalavera@godbooksolutions.com</a><br><a href="mailto:infoadmin@godbooksolutions.com">infoadmin@godbooksolutions.com</a>',
 'ct.hr.l':'Business Hours','ct.hr.v':'Mon–Fri: 9:00 AM – 5:00 PM ET',
 'cta.title':'Ready for Your Free Consultation?','cta.text':'Connect with us directly on WhatsApp for a fast, bilingual response. No commitment — just answers to your questions.','cta.wa':'Start on WhatsApp',
 'ft.tag':'Bilingual business services for the Latino and American communities in Michigan.',
@@ -62,6 +64,7 @@ es:{
 'hero.badge':'Servicios Empresariales Bilingües — Holland, MI',
 'hero.title':'Tu Socio Empresarial <em>Bilingüe</em> de Confianza',
 'hero.slogan':'Tu socio bilingüe para una contabilidad precisa, cumplimiento normativo y crecimiento en un mercado diverso.',
+'hero.virtual.note':'Servicios 100% virtuales disponibles en todo el pais con soporte remoto rapido.',
 'hero.cta1':'Consulta Gratuita','hero.cta2':'Nuestros Servicios',
 'hero.s1n':'5+','hero.s1l':'Áreas de Servicio','hero.s2n':'EN/ES','hero.s2l':'Soporte Bilingüe','hero.s3n':'MI','hero.s3l':'Registrado en Michigan',
 'hero.scroll':'Bajar',
@@ -71,6 +74,7 @@ es:{
 'mis.lbl':'Misión','mis.txt':'Empoderar a los emprendedores latinos y americanos en el diverso mercado de Michigan, ofreciendo servicios administrativos y financieros precisos, accesibles y bilingües — eliminando barreras y construyendo puentes hacia el éxito sostenible.',
 'vis.lbl':'Visión','vis.txt':'Convertirnos en el socio de servicios empresariales bilingüe más confiable del oeste de Michigan, reconocidos por nuestro compromiso con la excelencia, la sensibilidad cultural y el empoderamiento económico de las comunidades diversas.',
 'svc.lbl':'Lo Que Ofrecemos','svc.title':'Servicios Empresariales Integrales','svc.sub':'Cinco áreas especializadas diseñadas para apoyar cada etapa de tu trayectoria empresarial — desde la formación hasta el crecimiento.',
+'svc.alert':'Haz clic en cada encabezado de servicio para ver los servicios de esa categoria.',
 'c1.title':'Corporativo y Cumplimiento','c1.sub':'Corporate & Compliance',
 'c2.title':'Servicios Contables','c2.sub':'Financial & Bookkeeping',
 'c3.title':'Sistemas Gubernamentales','c3.sub':'Gov Systems & Admin',
@@ -104,7 +108,7 @@ es:{
 'ct.lbl':'Contáctanos','ct.title':'Construyamos Algo Juntos','ct.sub':'¿Listo para dar el siguiente paso? Estamos aquí para guiarte en cada proceso — en inglés o en español.',
 'ct.loc.l':'Ubicación','ct.loc.v':'Holland, Michigan, EE.UU.',
 'ct.ph.l':'Teléfono / WhatsApp','ct.ph.v':'+1 (616) 251-7351',
-'ct.em.l':'Correo Electrónico','ct.em.v':'info@godbookssolutions.com',
+'ct.em.l':'Correo Electrónico','ct.em.v':'<a href="mailto:iytalavera@godbooksolutions.com">iytalavera@godbooksolutions.com</a><br><a href="mailto:infoadmin@godbooksolutions.com">infoadmin@godbooksolutions.com</a>',
 'ct.hr.l':'Horario de Atención','ct.hr.v':'Lun–Vie: 9:00 AM – 5:00 PM ET',
 'cta.title':'¿Listo para tu Consulta Gratuita?','cta.text':'Contáctanos directamente por WhatsApp para una respuesta rápida y bilingüe. Sin compromiso — solo respuestas a tus preguntas.','cta.wa':'Escribir por WhatsApp',
 'ft.tag':'Servicios empresariales bilingües para las comunidades latina y americana en Michigan.',
@@ -114,7 +118,9 @@ es:{
 'ft.copy':'© 2025 GodBooks Solutions Services LLC. Todos los derechos reservados. Holland, MI.'
 }};
 
+let currentLang='en';
 function applyLang(lang){
+  currentLang=lang;
   const t=T[lang];
   document.querySelectorAll('[data-i18n]').forEach(el=>{
     const k=el.getAttribute('data-i18n');
@@ -137,11 +143,65 @@ if(mob)mob.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeM));
 const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}}),{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 
+const serviceCats=[...document.querySelectorAll('.svc-cat')];
+document.querySelectorAll('.service-toggle-btn').forEach(btn=>btn.addEventListener('click',()=>{
+  const parent=btn.closest('.svc-cat');
+  const isOpen=parent.classList.contains('active');
+  serviceCats.forEach(cat=>{
+    cat.classList.remove('active');
+    const catBtn=cat.querySelector('.service-toggle-btn');
+    if(catBtn)catBtn.setAttribute('aria-expanded','false');
+  });
+  if(!isOpen){
+    parent.classList.add('active');
+    btn.setAttribute('aria-expanded','true');
+  }
+}));
+
 document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',function(e){
   const t=document.querySelector(this.getAttribute('href'));
   if(t){e.preventDefault();closeM();window.scrollTo({top:t.getBoundingClientRect().top+scrollY-72,behavior:'smooth'})}
 }));
 
 document.querySelectorAll('.lang-btn').forEach(b=>b.addEventListener('click',()=>applyLang(b.dataset.lang)));
+
+/* ── MAIL CLIENT CHOOSER ── */
+const _mailModal=document.getElementById('mail-chooser');
+const _mailOptGmail=document.getElementById('mail-opt-gmail');
+const _mailOptOutlook=document.getElementById('mail-opt-outlook');
+const _mailOptYahoo=document.getElementById('mail-opt-yahoo');
+const _mailOptDefault=document.getElementById('mail-opt-default');
+const _mailOptDefaultLabel=document.getElementById('mail-opt-default-label');
+const _mailChooserTitle=document.getElementById('mail-chooser-title');
+const _mailI18n={
+  en:{title:'Open email with...',def:'Default Mail App'},
+  es:{title:'Abrir con tu correo...',def:'Aplicación de correo'}
+};
+function _openMailChooser(email){
+  const t=_mailI18n[currentLang]||_mailI18n.en;
+  _mailChooserTitle.textContent=t.title;
+  _mailOptDefaultLabel.textContent=t.def;
+  _mailOptGmail.href='https://mail.google.com/mail/?view=cm&fs=1&to='+encodeURIComponent(email);
+  _mailOptOutlook.href='https://outlook.live.com/mail/0/deeplink/compose?to='+encodeURIComponent(email);
+  _mailOptYahoo.href='https://compose.mail.yahoo.com/?to='+encodeURIComponent(email);
+  _mailOptDefault.href='mailto:'+email;
+  _mailModal.classList.add('open');
+  _mailModal.setAttribute('aria-hidden','false');
+}
+function _closeMailChooser(){
+  _mailModal.classList.remove('open');
+  _mailModal.setAttribute('aria-hidden','true');
+}
+document.getElementById('mail-chooser-close').addEventListener('click',_closeMailChooser);
+document.getElementById('mail-chooser-backdrop').addEventListener('click',_closeMailChooser);
+document.addEventListener('keydown',e=>{if(e.key==='Escape')_closeMailChooser();});
+_mailModal.querySelectorAll('.mail-opt').forEach(opt=>opt.addEventListener('click',()=>setTimeout(_closeMailChooser,120)));
+document.addEventListener('click',e=>{
+  const link=e.target.closest('a[href^="mailto:"]');
+  if(!link||link.closest('#mail-chooser'))return;
+  e.preventDefault();
+  _openMailChooser(link.href.replace('mailto:',''));
+});
+
 applyLang('en');
 })();
