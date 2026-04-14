@@ -3,6 +3,7 @@
 const T={
 en:{
 'nav.about':'About Us','nav.svc':'Services','nav.doc':'Documents','nav.contact':'Contact','nav.cta':'Free Consultation',
+'nav.proadvisor':'View My Intuit ProAdvisor Profile',
 'hero.badge':'Bilingual Business Services — Holland, MI',
 'hero.title':'Your Trusted <em>Bilingual</em> Business Partner',
 'hero.slogan':'Your bilingual partner for precise bookkeeping, compliance, and growth in a diverse marketplace.',
@@ -61,6 +62,7 @@ en:{
 },
 es:{
 'nav.about':'Quiénes Somos','nav.svc':'Servicios','nav.doc':'Documentos','nav.contact':'Contacto','nav.cta':'Consulta Gratuita',
+'nav.proadvisor':'Ver mi perfil de Intuit ProAdvisor',
 'hero.badge':'Servicios Empresariales Bilingües — Holland, MI',
 'hero.title':'Tu Socio Empresarial <em>Bilingüe</em> de Confianza',
 'hero.slogan':'Tu socio bilingüe para una contabilidad precisa, cumplimiento normativo y crecimiento en un mercado diverso.',
