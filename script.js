@@ -136,11 +136,33 @@ const navbar=document.getElementById('navbar');
 window.addEventListener('scroll',()=>navbar.classList.toggle('scrolled',window.scrollY>60),{passive:true});
 
 const ham=document.getElementById('ham'),mob=document.getElementById('mob'),mclose=document.getElementById('mclose');
-function openM(){mob.classList.add('open');document.body.style.overflow='hidden';ham.classList.add('open')}
-function closeM(){mob.classList.remove('open');document.body.style.overflow='';ham.classList.remove('open')}
-if(ham)ham.addEventListener('click',openM);
+function openM(){
+  if(!mob||!ham)return;
+  mob.classList.add('open');
+  mob.setAttribute('aria-hidden','false');
+  document.body.style.overflow='hidden';
+  ham.classList.add('open');
+  ham.setAttribute('aria-expanded','true');
+}
+function closeM(){
+  if(!mob||!ham)return;
+  mob.classList.remove('open');
+  mob.setAttribute('aria-hidden','true');
+  document.body.style.overflow='';
+  ham.classList.remove('open');
+  ham.setAttribute('aria-expanded','false');
+}
+function toggleM(){
+  if(!mob)return;
+  if(mob.classList.contains('open')) closeM();
+  else openM();
+}
+if(ham)ham.addEventListener('click',toggleM);
 if(mclose)mclose.addEventListener('click',closeM);
 if(mob)mob.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeM));
+if(mob)mob.addEventListener('click',e=>{if(e.target===mob)closeM();});
+window.addEventListener('keydown',e=>{if(e.key==='Escape')closeM();});
+window.addEventListener('resize',()=>{if(window.innerWidth>1024)closeM();});
 
 const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}}),{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
