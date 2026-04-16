@@ -25,6 +25,7 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:var(--fB);background:var(--alice);color:var(--txt);line-height:1.65;overflow-x:hidden}
+img{max-width:100%;height:auto}
 
 /* ── PROFESSIONAL BACKGROUND — soft navy-blue gradient + subtle texture ── */
 body::before{
@@ -242,7 +243,7 @@ body::after{
   border-radius:calc(var(--r-lg) - 4px);
   pointer-events:none;
 }
-..about-logo-box img{
+.about-logo-box img{
   width:100%;
   max-width:300px;
   object-fit:contain;
@@ -532,4 +533,101 @@ footer{background:var(--navy);color:rgba(255,255,255,.65);padding:44px 0 30px}
 /* Ajuste de márgenes para que no se corte el bloque final */
 #contact .contact-grid {
   margin-bottom: 0;
+}
+
+/* ── GLOBAL RESPONSIVE FIXES ── */
+@media(max-width:1024px){
+  .section{padding:84px 0}
+  .container{padding:0 20px}
+
+  .nav-links{display:none}
+  .nav-actions .btn-primary{display:none}
+  .hamburger{display:flex}
+  .nav-logo-tag{display:none}
+
+  #hero{min-height:auto;padding:120px 0 86px}
+  .hero-inner{grid-template-columns:1fr;gap:34px}
+  .hero-content{order:2}
+  .hero-visual{order:1}
+  .hero-logo-ring{width:270px;height:270px}
+  .hero-stats{justify-content:center;gap:24px;margin-top:28px}
+  .hero-stat-num{font-size:1.7rem}
+  .hero-cta{justify-content:center}
+
+  .about-intro{gap:30px}
+  .mv-cards{grid-template-columns:1fr}
+
+  .contact-grid{grid-template-columns:1fr;gap:28px}
+  .social-row{margin-top:24px}
+
+  .footer-top{grid-template-columns:1fr 1fr;gap:26px}
+}
+
+@media(max-width:768px){
+  .section{padding:72px 0}
+  .container{padding:0 16px}
+
+  #navbar{padding:8px 0}
+  .nav-inner{gap:10px}
+  .nav-logo-name{font-size:.96rem;white-space:normal;line-height:1.15}
+  .nav-logo-img{height:40px;width:40px}
+  .nav-logo-img img{width:34px;height:34px}
+  .nav-actions{gap:6px}
+  .lang-btn{padding:5px 9px;font-size:.72rem}
+  .btn-proadvisor-nav{display:none}
+
+  .mobile-menu a{font-size:1.56rem}
+  .mobile-proadvisor-link{font-size:1.2rem !important}
+
+  #hero{padding:104px 0 74px}
+  .hero-title{font-size:clamp(1.8rem,8.8vw,2.35rem);margin-bottom:16px}
+  .hero-slogan{font-size:.95rem;line-height:1.7}
+  .hero-virtual-note{border-radius:18px;font-size:.82rem;padding:10px 12px}
+  .hero-logo-ring{width:220px;height:220px}
+  .hero-logo-ring img{width:56%;max-width:124px}
+  .hero-badges-row{gap:8px}
+  .hero-badge-img{width:34px;height:34px;padding:3px}
+  .hero-badge{font-size:.74rem;line-height:1.4;padding:8px 12px;border-radius:14px}
+  .hero-cta{flex-direction:column;align-items:stretch}
+  .hero-cta .btn{justify-content:center;width:100%}
+  .hero-stats{justify-content:space-between;gap:10px;padding-top:20px}
+  .hero-stats > div{flex:1;min-width:90px;text-align:center}
+  .hero-stat-num{font-size:1.45rem}
+  .hero-stat-label{font-size:.64rem;line-height:1.3}
+
+  .cat-title{font-size:1.2rem}
+  .doc-grid{grid-template-columns:1fr}
+
+  .contact-item{gap:10px;margin-bottom:18px}
+  .cta-block{padding:20px 18px}
+  .cta-title{font-size:1.4rem}
+  .social-link,.trust-icon,.badge-social{width:36px;height:36px}
+
+  .footer-top{grid-template-columns:1fr}
+  .footer-logo-wrap{justify-content:center}
+  .footer-logo-box{width:46px;height:46px}
+  .footer-logo-box img{width:40px;height:40px}
+  .fcol{text-align:center}
+
+  .wa-float{bottom:18px;right:18px;width:52px;height:52px}
+}
+
+@media(max-width:480px){
+  .nav-logo{max-width:64%}
+  .nav-logo-name{font-size:.88rem}
+  .lang-toggle{padding:2px}
+  .lang-btn{padding:4px 7px;font-size:.67rem}
+
+  .hero-logo-ring{width:188px;height:188px}
+  .hero-logo-ring img{width:52%;max-width:98px}
+  .hero-badges-row{gap:6px}
+  .hero-badge-img{width:30px;height:30px;padding:2px}
+  .hero-badge{font-size:.7rem}
+  .hero-stats{gap:8px}
+  .social-link,.trust-icon,.badge-social{width:32px;height:32px}
+  .footer-logo-box{width:42px;height:42px}
+  .footer-logo-box img{width:36px;height:36px}
+
+  .pricing-note{padding:12px 12px;font-size:.79rem}
+  .wa-cta{width:100%;justify-content:center;padding:13px 16px}
 }
