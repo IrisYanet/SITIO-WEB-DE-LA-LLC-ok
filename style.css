@@ -127,6 +127,9 @@ body::after{
 .mobile-proadvisor-link{color:var(--gold-lt) !important;font-size:1.5rem !important;margin-top:8px}
 .mobile-close{position:absolute;top:20px;right:24px;background:none;border:none;color:var(--white);font-size:2.2rem;cursor:pointer;line-height:1}
 
+/* Keep a single close icon on mobile: the hamburger morphs into X */
+.mobile-close{display:none}
+
 /* ══════════════════════════════════════════
    HERO
 ══════════════════════════════════════════ */
@@ -535,6 +538,53 @@ footer{background:var(--navy);color:rgba(255,255,255,.65);padding:44px 0 30px}
   margin-bottom: 0;
 }
 
+/* ══════════════════════════════════════════
+   APPOINTMENTS
+══════════════════════════════════════════ */
+#appointments{
+  background: linear-gradient(180deg, #D8E9F8 0%, #C4DAEA 100%);
+  padding-top:72px;
+  position:relative;
+  z-index:1;
+}
+
+.appointments-wrap{
+  max-width:1000px;
+  margin:34px auto 0;
+}
+
+.appointments-frame-shell{
+  width:100%;
+  border-radius:var(--r-lg);
+  overflow:hidden;
+  background:#fff;
+  border:1px solid rgba(11,31,58,.12);
+  box-shadow:var(--shd-lg);
+}
+
+.appointments-frame-shell iframe{
+  display:block;
+  width:100%;
+  height:900px;
+  border:0;
+}
+
+.appointments-button-fallback{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:16px;
+  position:relative;
+  z-index:2;
+}
+
+.appointments-button-fallback a,
+.appointments-button-fallback button,
+.appointments-button-fallback div{
+  max-width:100%;
+}
+
 /* ── GLOBAL RESPONSIVE FIXES ── */
 @media(max-width:1024px){
   .section{padding:84px 0}
@@ -610,6 +660,11 @@ footer{background:var(--navy);color:rgba(255,255,255,.65);padding:44px 0 30px}
   .fcol{text-align:center}
 
   .wa-float{bottom:18px;right:18px;width:52px;height:52px}
+
+  .appointments-wrap{margin-top:26px}
+  .appointments-frame-shell{border-radius:14px}
+  .appointments-frame-shell iframe{height:900px}
+  .appointments-button-fallback{padding:0 8px}
 }
 
 @media(max-width:480px){
@@ -630,4 +685,7 @@ footer{background:var(--navy);color:rgba(255,255,255,.65);padding:44px 0 30px}
 
   .pricing-note{padding:12px 12px;font-size:.79rem}
   .wa-cta{width:100%;justify-content:center;padding:13px 16px}
+
+  .appointments-wrap{margin-top:22px}
+  .appointments-button-fallback{margin-top:14px}
 }

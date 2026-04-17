@@ -327,6 +327,50 @@
   </div>
 </section>
 
+<!-- ═══ APPOINTMENTS ═══ -->
+<section id="appointments" class="section">
+  <div class="container">
+    <div class="text-center reveal">
+      <span class="section-label" data-i18n="apt.lbl">Appointments</span>
+      <span class="gold-line c"></span>
+      <h2 class="section-title" data-i18n="apt.title">Schedule Your Appointment</h2>
+      <p class="section-sub" data-i18n="apt.sub">Select your preferred date and time in the calendar below. All required questions are visible in the full form.</p>
+    </div>
+
+    <div class="appointments-wrap reveal rd1">
+      <div class="appointments-frame-shell">
+        <iframe
+          src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ33hjUnO9Ti7IIn3zsYl22Bbwv8w48GfGBuAuMA1R1QvR895bU3j8_IclAdvMOEWwg0YTlc07rk?gv=true"
+          title="Google Calendar Appointment Scheduling"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allow="fullscreen"
+        ></iframe>
+      </div>
+
+      <div class="appointments-button-fallback">
+        <!-- Google Calendar Appointment Scheduling begin -->
+        <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+        <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+        <script>
+        (function() {
+          var target = document.currentScript;
+          window.addEventListener('load', function() {
+            calendar.schedulingButton.load({
+              url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ33hjUnO9Ti7IIn3zsYl22Bbwv8w48GfGBuAuMA1R1QvR895bU3j8_IclAdvMOEWwg0YTlc07rk?gv=true',
+              color: '#039BE5',
+              label: 'Programar una cita',
+              target,
+            });
+          });
+        })();
+        </script>
+        <!-- end Google Calendar Appointment Scheduling -->
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ═══ FOOTER ═══ -->
 <footer>
   <div class="container">
