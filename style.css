@@ -220,7 +220,7 @@ body::after{
 /* ══════════════════════════════════════════
    ABOUT
 ══════════════════════════════════════════ */
-#about{background: linear-gradient(180deg, #D8E9F8 0%, #C4DAEA 100%);padding-top:12px;padding-bottom:44px}
+#about{background: linear-gradient(180deg, #D8E9F8 0%, #C4DAEA 100%);padding-top:46px;padding-bottom:44px}
 .about-intro{display:grid;grid-template-columns:1fr;gap:22px;align-items:center;margin-bottom:14px}
 
 /* Logo box — rich navy panel with gold accent border */
@@ -398,7 +398,7 @@ body::after{
    FOOTER
 ══════════════════════════════════════════ */
 footer{background:var(--navy);color:rgba(255,255,255,.65);padding:32px 0 24px}
-.footer-top{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:40px;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:20px}
+.footer-top{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:40px;padding-top:28px;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:20px}
 
 /* Footer logo box — white rounded container so logo is visible */
 .footer-logo-wrap{display:flex;align-items:center;gap:14px;margin-bottom:16px}
@@ -639,7 +639,7 @@ footer{background:var(--navy);color:rgba(255,255,255,.65);padding:32px 0 24px}
 
 @media(max-width:768px){
   :root{--nav-offset:72px}
-  #about{padding-top:10px;padding-bottom:30px}
+  #about{padding-top:32px;padding-bottom:30px}
   #services{padding-top:24px}
   #documents{padding-top:48px}
   #contact{padding-top:22px}
@@ -704,7 +704,7 @@ footer{background:var(--navy);color:rgba(255,255,255,.65);padding:32px 0 24px}
 
 @media(max-width:480px){
   :root{--nav-offset:68px}
-  #about{padding-top:8px;padding-bottom:22px}
+  #about{padding-top:24px;padding-bottom:22px}
   #services{padding-top:18px}
   #documents{padding-top:42px}
   #contact{padding-top:18px}
