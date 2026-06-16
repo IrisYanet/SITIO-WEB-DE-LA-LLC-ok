@@ -137,7 +137,18 @@ function applyLang(lang){
 }
 
 const navbar=document.getElementById('navbar');
-window.addEventListener('scroll',()=>navbar.classList.toggle('scrolled',window.scrollY>60),{passive:true});
+function updateNavOffset(){
+  if(!navbar) return;
+  const dynamicOffset=Math.ceil(navbar.offsetHeight+8);
+  document.documentElement.style.setProperty('--nav-offset',`${dynamicOffset}px`);
+}
+
+window.addEventListener('scroll',()=>{
+  if(!navbar) return;
+  navbar.classList.toggle('scrolled',window.scrollY>60);
+  updateNavOffset();
+},{passive:true});
+window.addEventListener('resize',updateNavOffset);
 
 const ham=document.getElementById('ham'),mob=document.getElementById('mob'),mclose=document.getElementById('mclose');
 function openM(){
@@ -193,7 +204,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',
     closeM();
     const cssOffset=parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--nav-offset'));
     const navOffset=Number.isFinite(cssOffset)&&cssOffset>0?cssOffset:(navbar?navbar.offsetHeight:72);
-    const targetTop=t.getBoundingClientRect().top+window.scrollY-navOffset-8;
+    const targetTop=t.getBoundingClientRect().top+window.scrollY-navOffset+6;
     window.scrollTo({top:Math.max(0,targetTop),behavior:'smooth'});
   }
 }));
@@ -239,4 +250,5 @@ document.addEventListener('click',e=>{
 });
 
 applyLang('en');
+updateNavOffset();
 })();
