@@ -220,7 +220,7 @@ body::after{
 /* ══════════════════════════════════════════
    ABOUT
 ══════════════════════════════════════════ */
-#about{background: linear-gradient(180deg, #D8E9F8 0%, #C4DAEA 100%);padding-top:46px;padding-bottom:44px}
+#about{background: linear-gradient(180deg, #D8E9F8 0%, #C4DAEA 100%);padding-top:40px;padding-bottom:44px}
 .about-intro{display:grid;grid-template-columns:1fr;gap:22px;align-items:center;margin-bottom:14px}
 
 /* Logo box — rich navy panel with gold accent border */
@@ -259,7 +259,7 @@ body::after{
 
 .about-text p{color:var(--txt-mid);font-size:.88rem;line-height:1.58;margin-bottom:10px}
 .about-text p:last-child{margin-bottom:0}
-.mv-cards{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.mv-cards{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:28px}
 .mv-card{background:#D9E5F0;border:1px solid rgba(11,31,58,0.13);border-radius:var(--r);padding:14px 12px;position:relative;overflow:hidden;transition:var(--tr)}
 .mv-card::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;background:linear-gradient(180deg,var(--gold),var(--gold-lt))}
 .mv-card:hover{box-shadow:var(--shd-md);transform:translateY(-3px)}
@@ -270,7 +270,7 @@ body::after{
 /* ══════════════════════════════════════════
    SERVICES
 ══════════════════════════════════════════ */
-#services{background:var(--alice);padding-top:30px}
+#services{background:var(--alice);padding-top:40px}
 #services .text-center{margin-bottom:16px !important}
 .services-click-alert{
   max-width:780px;
@@ -322,7 +322,7 @@ body::after{
 /* ══════════════════════════════════════════
    DOCUMENTS
 ══════════════════════════════════════════ */
-#documents{background: linear-gradient(180deg, #D8E9F8 0%, #C4DAEA 100%);padding-top:58px}
+#documents{background: linear-gradient(180deg, #D8E9F8 0%, #C4DAEA 100%);padding-top:40px}
 .doc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;margin-top:36px}
 .doc-card{display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px;background:#D9E5F0;border:1px solid rgba(11,31,58,0.12);border-radius:var(--r-lg);padding:26px 18px;text-decoration:none;transition:var(--tr);position:relative;overflow:hidden}
 .doc-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--gold),var(--gold-lt))}
@@ -334,7 +334,7 @@ body::after{
 /* ══════════════════════════════════════════
    CONTACT
 ══════════════════════════════════════════ */
-#contact{background:var(--alice);padding-top:28px;padding-bottom:22px;border-bottom:1px solid rgba(11,31,58,.12)}
+#contact{background:var(--alice);padding-top:40px;padding-bottom:22px;border-bottom:1px solid rgba(11,31,58,.12)}
 #contact .text-center{margin-bottom:14px !important}
 .contact-grid{display:grid;grid-template-columns:1.2fr 0.9fr;gap:22px;align-items:stretch}
 .contact-grid > div:first-child{display:flex;flex-direction:column;justify-content:flex-start;min-height:100%;padding-bottom:0}
@@ -398,7 +398,7 @@ body::after{
    FOOTER
 ══════════════════════════════════════════ */
 footer{background:var(--navy);color:rgba(255,255,255,.65);padding:32px 0 24px}
-.footer-top{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:40px;padding-top:28px;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:20px}
+.footer-top{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:40px;padding-top:76px;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:20px}
 
 /* Footer logo box — white rounded container so logo is visible */
 .footer-logo-wrap{display:flex;align-items:center;gap:14px;margin-bottom:16px}
@@ -639,10 +639,10 @@ footer{background:var(--navy);color:rgba(255,255,255,.65);padding:32px 0 24px}
 
 @media(max-width:768px){
   :root{--nav-offset:72px}
-  #about{padding-top:32px;padding-bottom:30px}
-  #services{padding-top:24px}
-  #documents{padding-top:48px}
-  #contact{padding-top:22px}
+  #about{padding-top:28px;padding-bottom:30px}
+  #services{padding-top:28px}
+  #documents{padding-top:28px}
+  #contact{padding-top:28px}
   .section{padding:50px 0}
   .container{padding:0 16px}
 
@@ -704,10 +704,10 @@ footer{background:var(--navy);color:rgba(255,255,255,.65);padding:32px 0 24px}
 
 @media(max-width:480px){
   :root{--nav-offset:68px}
-  #about{padding-top:24px;padding-bottom:22px}
-  #services{padding-top:18px}
-  #documents{padding-top:42px}
-  #contact{padding-top:18px}
+  #about{padding-top:22px;padding-bottom:22px}
+  #services{padding-top:22px}
+  #documents{padding-top:22px}
+  #contact{padding-top:22px}
   .nav-logo{max-width:64%}
   .nav-logo-name{font-size:.88rem;white-space:nowrap}
   .lang-toggle{padding:2px}
