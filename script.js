@@ -188,7 +188,14 @@ document.querySelectorAll('.service-toggle-btn').forEach(btn=>btn.addEventListen
 
 document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',function(e){
   const t=document.querySelector(this.getAttribute('href'));
-  if(t){e.preventDefault();closeM();window.scrollTo({top:t.getBoundingClientRect().top+scrollY-72,behavior:'smooth'})}
+  if(t){
+    e.preventDefault();
+    closeM();
+    const cssOffset=parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--nav-offset'));
+    const navOffset=Number.isFinite(cssOffset)&&cssOffset>0?cssOffset:(navbar?navbar.offsetHeight:72);
+    const targetTop=t.getBoundingClientRect().top+window.scrollY-navOffset-8;
+    window.scrollTo({top:Math.max(0,targetTop),behavior:'smooth'});
+  }
 }));
 
 document.querySelectorAll('.lang-btn').forEach(b=>b.addEventListener('click',()=>applyLang(b.dataset.lang)));
