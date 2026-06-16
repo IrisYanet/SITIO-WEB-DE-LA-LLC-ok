@@ -60,7 +60,7 @@ en:{
 'ft.links':'Quick Links','ft.svc':'Services','ft.legal':'Legal / Disclaimer',
 'ft.dis.en':'Professional Disclaimer: Provider is not an Attorney, a CPA, or a licensed Tax Preparer (No PTIN). Fees cover administrative labor only.',
 'ft.dis.es':'Descargo profesional: El proveedor no es Abogado, CPA ni preparador de impuestos licenciado (No posee PTIN). Los cargos cubren solo labor administrativa.',
-'ft.copy':'© 2025 GodBooks Solutions Services LLC. All rights reserved. Holland, MI.'
+'ft.copy':'© 2026 GodBooks Solutions Services LLC. All rights reserved. Holland, MI.'
 },
 es:{
 'nav.about':'Quiénes Somos','nav.svc':'Servicios','nav.doc':'Documentos','nav.contact':'Contacto','nav.cta':'Consulta Gratuita',
@@ -121,7 +121,7 @@ es:{
 'ft.links':'Navegación','ft.svc':'Servicios','ft.legal':'Legal / Descargo',
 'ft.dis.en':'Professional Disclaimer: Provider is not an Attorney, a CPA, or a licensed Tax Preparer (No PTIN). Fees cover administrative labor only.',
 'ft.dis.es':'Descargo profesional: El proveedor no es Abogado, CPA ni preparador de impuestos licenciado (No posee PTIN). Los cargos cubren solo labor administrativa.',
-'ft.copy':'© 2025 GodBooks Solutions Services LLC. Todos los derechos reservados. Holland, MI.'
+'ft.copy':'© 2026 GodBooks Solutions Services LLC. Todos los derechos reservados. Holland, MI.'
 }};
 
 let currentLang='en';
