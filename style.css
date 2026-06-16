@@ -386,7 +386,7 @@ body::after{
 .wa-cta{display:inline-flex;align-items:center;gap:8px;background:#25D366;color:var(--white);padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:600;font-size:.82rem;transition:var(--tr);box-shadow:0 4px 18px rgba(37,211,102,.35);position:relative}
 .wa-cta:hover{background:#1ebe5d;transform:translateY(-2px);box-shadow:0 8px 26px rgba(37,211,102,.45)}
 .wa-cta svg{width:20px;height:20px}
-.contact-side .social-row{margin-top:10px;padding-top:0}
+.contact-side .social-row{margin-top:10px;padding-top:0;margin-bottom:18px}
 .admin-support-card{margin-top:auto;margin-bottom:0;position:relative;top:0;padding:9px 10px;border-radius:8px;background:linear-gradient(180deg,var(--white) 0%,var(--alice) 100%);border:1px solid rgba(11,31,58,.14);border-left:4px solid var(--gold);box-shadow:0 8px 18px rgba(11,31,58,.09);color:var(--txt);width:100%;align-self:stretch}
 .admin-support-head{display:flex;align-items:center;gap:8px;margin-bottom:4px}
 .admin-support-icon{font-size:1rem;line-height:1}
@@ -688,7 +688,7 @@ footer{background:var(--navy);color:rgba(255,255,255,.65);padding:32px 0 24px}
   .admin-support-text{font-size:.72rem;line-height:1.4}
   .appointment-stand{top:0;margin-top:12px;margin-bottom:8px;width:100%;white-space:normal}
   .social-row{margin-top:8px;padding-top:0}
-  .contact-side .social-row{justify-content:center;row-gap:8px}
+  .contact-side .social-row{justify-content:center;row-gap:8px;margin-bottom:20px}
   .social-link,.trust-icon,.badge-social{width:36px;height:36px}
 
   .footer-top{grid-template-columns:1fr}
@@ -734,7 +734,7 @@ footer{background:var(--navy);color:rgba(255,255,255,.65);padding:32px 0 24px}
   .admin-support-text{font-size:.8rem;line-height:1.48}
   .appointment-stand{width:100%;justify-content:center;top:0;margin-top:10px;margin-bottom:8px;white-space:normal}
   .social-row{margin-top:6px;padding-top:0}
-  .contact-side .social-row{justify-content:center;row-gap:7px}
+  .contact-side .social-row{justify-content:center;row-gap:7px;margin-bottom:18px}
 }
 
 @media(max-width:390px){
