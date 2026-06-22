@@ -35,7 +35,7 @@ en:{
 's3.1.t':'Annual','s3.1.n':'Virtual Registered Agent (Holland, MI)','s3.1.d':'Annual legal mail scanning and 24h business forwarding.',
 's3.2.t':'State Vendor','s3.2.n':'SIGMA VSS & PMBC Setup','s3.2.d':'Official registration as a Michigan Government Vendor.',
 's3.3.t':'Federal','s3.3.n':'EFTPS Setup & Training','s3.3.d':'Configuration of the federal tax payment system.',
-'s4.1.t':'Assessment','s4.1.n':'Business Health Diagnose','s4.1.d':'Comprehensive assessment of your current business state.',
+'s4.1.t':'Assessment','s4.1.n':'Business Health Diagnosis','s4.1.d':'Comprehensive assessment of your current business state.',
 's4.2.t':'Roadmap','s4.2.n':'Strategic Action Plan','s4.2.d':'Custom roadmaps designed for sustainable growth.',
 's4.3.t':'Analysis','s4.3.n':'Economic Feasibility Study','s4.3.d':'Detailed market and financial viability reports.',
 's4.4.t':'Coaching','s4.4.n':'Virtual Coaching & Bilingual VA','s4.4.d':'Hourly professional support and bilingual administrative assistance.',
