@@ -331,6 +331,35 @@ body::after{
 .doc-title{font-family:var(--fD);font-size:1.2rem;font-weight:700;color:var(--navy)}
 .doc-desc{font-size:.85rem;color:var(--txt-mid);line-height:1.6}
 
+.doc-form-card{grid-column:1/-1;max-width:760px;margin:0 auto;text-align:left;align-items:stretch}
+.doc-form{display:grid;gap:10px;margin-top:8px}
+.doc-form-label{display:grid;gap:6px;font-size:.82rem;color:var(--txt-mid);font-weight:500}
+.doc-form-input{
+  width:100%;
+  padding:10px 12px;
+  border:1px solid rgba(11,31,58,.18);
+  border-radius:8px;
+  background:var(--white);
+  color:var(--txt);
+  font-family:var(--fB);
+  font-size:.85rem;
+  transition:var(--tr);
+}
+.doc-form-input:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(200,168,75,.22)}
+.doc-form-hidden{display:none}
+.doc-submit-btn{justify-content:center;margin-top:4px}
+.doc-form [data-netlify-recaptcha="true"]{margin-top:4px;overflow:hidden}
+.doc-form-message{display:none;margin-top:12px;padding:11px 12px;border-radius:10px;font-size:.86rem;font-weight:600;text-align:center;border:1px solid transparent}
+.doc-form-message.show{display:block;animation:fadeInUp .3s ease}
+.doc-form-message.success{background:rgba(36,138,61,.09);border-color:rgba(36,138,61,.25);color:#1E6B33}
+.doc-form-message.error{background:rgba(178,36,36,.09);border-color:rgba(178,36,36,.25);color:#8F1E1E}
+.doc-form-message.warning{background:rgba(200,168,75,.14);border-color:rgba(200,168,75,.3);color:var(--navy)}
+
+@keyframes fadeInUp{
+  from{opacity:0;transform:translateY(6px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
 /* ══════════════════════════════════════════
    CONTACT
 ══════════════════════════════════════════ */
@@ -677,6 +706,10 @@ footer{background:var(--navy);color:rgba(255,255,255,.65);padding:32px 0 24px}
 
   .cat-title{font-size:1.2rem}
   .doc-grid{grid-template-columns:1fr}
+  .doc-form-card{padding:22px 14px}
+  .doc-form-label{font-size:.8rem}
+  .doc-form-input{font-size:16px}
+  .doc-submit-btn{width:100%}
 
   .contact-item{gap:8px;margin-bottom:10px}
   #contact{padding-bottom:16px}
@@ -721,6 +754,8 @@ footer{background:var(--navy);color:rgba(255,255,255,.65);padding:32px 0 24px}
   .hero-badge-img{width:30px;height:30px;padding:2px}
   .hero-badge{font-size:.7rem}
   .hero-stats{gap:8px}
+  .doc-form-card{padding:18px 12px}
+  .doc-form [data-netlify-recaptcha="true"]{transform:scale(.88);transform-origin:left top;min-height:70px}
   .social-link,.trust-icon,.badge-social{width:32px;height:32px}
   .footer-logo-box{width:42px;height:42px}
   .footer-logo-box img{width:36px;height:36px}
@@ -743,6 +778,7 @@ footer{background:var(--navy);color:rgba(255,255,255,.65);padding:32px 0 24px}
   .nav-logo-name{font-size:.82rem}
   .hero-title{font-size:clamp(1.62rem,8.6vw,2.05rem)}
   .hero-slogan{font-size:.88rem}
+  .doc-form [data-netlify-recaptcha="true"]{transform:scale(.82);min-height:66px}
   .appointment-stand{margin-top:14px;margin-bottom:8px}
   .social-row{margin-top:8px;gap:8px}
   .admin-support-card{margin-top:10px;padding:8px 10px}

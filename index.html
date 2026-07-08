@@ -232,24 +232,52 @@
       <p class="section-sub" data-i18n="doc.sub">Download our official documents to understand our terms, pricing, and service addendums.</p>
     </div>
     <div class="doc-grid">
-      <a href="documents/MSA.pdf" download class="doc-card reveal">
+      <article class="doc-card doc-form-card reveal">
         <div class="doc-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
-        <div class="doc-title" data-i18n="doc.msa.t">Master Service Agreement</div>
-        <p class="doc-desc" data-i18n="doc.msa.d">Our complete terms of service, governing all professional relationships with clients.</p>
-        <span class="btn btn-navy"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg><span data-i18n="doc.dl">Download PDF</span></span>
-      </a>
-      <a href="documents/ADDENDUM.pdf" download class="doc-card reveal rd1">
-        <div class="doc-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg></div>
-        <div class="doc-title" data-i18n="doc.add.t">Service Addendum</div>
-        <p class="doc-desc" data-i18n="doc.add.d">Supplemental service terms and specific scope additions to the base agreement.</p>
-        <span class="btn btn-navy"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg><span data-i18n="doc.dl">Download PDF</span></span>
-      </a>
-      <a href="documents/Prices.pdf" download class="doc-card reveal rd2">
-        <div class="doc-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
-        <div class="doc-title" data-i18n="doc.pri.t">Official Price List</div>
-        <p class="doc-desc" data-i18n="doc.pri.d">Estimated pricing for all services. Subject to formal Quote/Estimate after scope review.</p>
-        <span class="btn btn-navy"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg><span data-i18n="doc.dl">Download PDF</span></span>
-      </a>
+        <div class="doc-title">Request Documents / Solicitar Documentos</div>
+        <p class="doc-desc">Please complete this form to download your file. / Complete este formulario para descargar su archivo.</p>
+
+        <form id="documents-gate-form" class="doc-form" name="contact-documents" data-netlify="true" data-netlify-recaptcha="true" method="POST" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="contact-documents"/>
+          <input type="hidden" name="subject" value="New Document Request / Nueva Solicitud de Documento"/>
+          <input type="hidden" name="site_language" value="en"/>
+          <input type="hidden" name="document_label" value=""/>
+          <p class="doc-form-hidden">
+            <label>Do not fill this out if you are human: <input name="bot-field"/></label>
+          </p>
+
+          <label class="doc-form-label">
+            Full Name / Nombre Completo *
+            <input class="doc-form-input" type="text" name="full_name" required/>
+          </label>
+
+          <label class="doc-form-label">
+            Email / Correo Electronico *
+            <input class="doc-form-input" type="email" name="email" required/>
+          </label>
+
+          <label class="doc-form-label">
+            Phone Number (Optional) / Telefono (Opcional)
+            <input class="doc-form-input" type="text" name="phone"/>
+          </label>
+
+          <label class="doc-form-label">
+            Select Document / Seleccione Documento *
+            <select class="doc-form-input" name="document_request" required>
+              <option value="">Choose one / Elegir uno</option>
+              <option value="msa">Master Service Agreement / Acuerdo Maestro de Servicios</option>
+              <option value="addendum">Service Addendum / Adenda de Servicio</option>
+              <option value="prices">Official Price List / Lista Oficial de Precios</option>
+            </select>
+          </label>
+
+          <div data-netlify-recaptcha="true"></div>
+
+          <button type="submit" class="btn btn-navy doc-submit-btn">Submit / Enviar</button>
+        </form>
+
+        <p id="documents-gate-message" class="doc-form-message" aria-live="polite"></p>
+      </article>
     </div>
   </div>
 </section>
@@ -419,6 +447,106 @@
   </div>
 </div>
 
+<script>
+(function(){
+  var form=document.getElementById('documents-gate-form');
+  var messageBox=document.getElementById('documents-gate-message');
+  if(!form||!messageBox){return;}
+
+  function encodeForm(data){
+    return Object.keys(data).map(function(key){
+      return encodeURIComponent(key)+'='+encodeURIComponent(data[key]);
+    }).join('&');
+  }
+
+  function isSpanish(){
+    return (document.documentElement.lang||'en').toLowerCase().indexOf('es')===0;
+  }
+
+  function setMessage(type,meta){
+    meta=meta||{};
+    var fullName=(meta.fullName||'').trim();
+    var docLabel=(meta.docLabel||'').trim();
+    messageBox.className='doc-form-message show '+type;
+    if(type==='success'){
+      if(isSpanish()){
+        messageBox.textContent=(fullName?('Gracias, '+fullName+'. '):'Gracias. ')
+          +(docLabel?('Su documento "'+docLabel+'" se esta descargando. '):'Su descarga comenzara automaticamente. ')
+          +'Revise su carpeta de descargas.';
+      }else{
+        messageBox.textContent=(fullName?('Thank you, '+fullName+'. '):'Thank you. ')
+          +(docLabel?('Your document "'+docLabel+'" is downloading now. '):'Your download will start automatically. ')
+          +'Please check your Downloads folder.';
+      }
+    }else if(type==='error'){
+      messageBox.textContent=isSpanish()
+        ? 'Error al enviar. Intente nuevamente.'
+        : 'Submission error. Please try again.';
+    }else if(type==='warning'){
+      messageBox.textContent=isSpanish()
+        ? 'Seleccione un documento antes de enviar.'
+        : 'Please select a document before submitting.';
+    }
+  }
+
+  var fileMap={
+    msa:'documents/MSA.pdf',
+    addendum:'documents/ADDENDUM.pdf',
+    prices:'documents/Prices.pdf'
+  };
+
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+
+    var selectedDoc=(form.elements.document_request&&form.elements.document_request.value)||'';
+    var selectedLabel=(form.elements.document_request&&form.elements.document_request.selectedOptions&&form.elements.document_request.selectedOptions[0])
+      ? form.elements.document_request.selectedOptions[0].text
+      : '';
+    if(!selectedDoc){
+      setMessage('warning');
+      return;
+    }
+
+    if(form.elements.site_language){
+      form.elements.site_language.value=isSpanish() ? 'es' : 'en';
+    }
+    if(form.elements.document_label){
+      form.elements.document_label.value=selectedLabel;
+    }
+
+    var formData=new FormData(form);
+    var payload={};
+    formData.forEach(function(value,key){payload[key]=value;});
+
+    fetch('/',{
+      method:'POST',
+      headers:{'Content-Type':'application/x-www-form-urlencoded'},
+      body:encodeForm(payload)
+    })
+    .then(function(){
+      setMessage('success',{
+        fullName:(form.elements.full_name&&form.elements.full_name.value)||'',
+        docLabel:selectedLabel
+      });
+
+      var fileToDownload=fileMap[selectedDoc];
+      if(fileToDownload){
+        var link=document.createElement('a');
+        link.href=fileToDownload;
+        link.setAttribute('download','');
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }
+
+      form.reset();
+    })
+    .catch(function(){
+      setMessage('error');
+    });
+  });
+})();
+</script>
 <script src="script.js"></script>
 </body>
 </html>
