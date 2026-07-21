@@ -263,8 +263,8 @@ body::after{
 .state-vendor-badge{
   margin:8px auto 10px;
   width:100%;
-  max-width:500px;
-  padding:4px 7px;
+  max-width:calc(100% - 2.2rem);
+  padding:3px 7px;
   border:1px solid rgba(11,31,58,.16);
   border-left:2px solid var(--gold);
   border-radius:7px;
@@ -276,24 +276,24 @@ body::after{
 }
 .svb-kicker{
   font-family:var(--fD);
-  font-size:.64rem;
+  font-size:.62rem;
   font-weight:700;
   color:var(--navy);
-  line-height:1.05;
+  line-height:1.02;
   margin:0;
-  padding-bottom:1px;
+  padding-bottom:0;
   border-bottom:1px solid rgba(11,31,58,.14);
 }
 .svb-meta{display:block;text-align:center}
 .svb-text{
-  font-size:.53rem;
+  font-size:.51rem;
   color:var(--txt-mid);
-  line-height:1.14;
+  line-height:1.1;
   margin:0;
-  margin-bottom:1px;
+  margin-bottom:0;
 }
 .svb-code{
-  font-size:.45rem;
+  font-size:.43rem;
   color:var(--txt-light);
   letter-spacing:.015em;
   text-transform:uppercase;
@@ -310,15 +310,15 @@ body::after{
 @media(max-width:768px){
   .state-vendor-badge{
     width:100%;
-    max-width:460px;
-    padding:4px 6px;
+    max-width:calc(100% - 1rem);
+    padding:3px 6px;
     gap:2px;
     margin:8px auto;
   }
-  .svb-kicker{font-size:.61rem;padding-bottom:1px}
+  .svb-kicker{font-size:.59rem;padding-bottom:0}
   .svb-meta{display:block;text-align:center}
-  .svb-text{font-size:.5rem;line-height:1.14;margin-bottom:1px}
-  .svb-code{font-size:.43rem;border-left:none;padding-left:0}
+  .svb-text{font-size:.49rem;line-height:1.1;margin-bottom:0}
+  .svb-code{font-size:.42rem;border-left:none;padding-left:0}
 }
 
 .mv-cards{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:28px}
