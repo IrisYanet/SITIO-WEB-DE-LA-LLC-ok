@@ -259,6 +259,42 @@ body::after{
 
 .about-text p{color:var(--txt-mid);font-size:.88rem;line-height:1.58;margin-bottom:10px}
 .about-text p:last-child{margin-bottom:0}
+
+.state-vendor-badge{
+  margin-top:14px;
+  padding:14px 16px;
+  border:1px solid rgba(11,31,58,.16);
+  border-left:4px solid var(--gold);
+  border-radius:12px;
+  background:linear-gradient(165deg, rgba(255,255,255,.62) 0%, rgba(240,248,255,.8) 100%);
+  box-shadow:0 8px 22px rgba(11,31,58,.08);
+}
+.svb-kicker{
+  font-family:var(--fD);
+  font-size:1.03rem;
+  font-weight:700;
+  color:var(--navy);
+  line-height:1.2;
+  margin-bottom:6px;
+}
+.svb-text{
+  font-size:.82rem;
+  color:var(--txt-mid);
+  line-height:1.52;
+  margin-bottom:6px;
+}
+.svb-code{
+  font-size:.74rem;
+  color:var(--txt-light);
+  letter-spacing:.04em;
+  text-transform:uppercase;
+}
+.svb-code strong{
+  color:var(--navy);
+  font-weight:700;
+  letter-spacing:.06em;
+}
+
 .mv-cards{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:28px}
 .mv-card{background:#D9E5F0;border:1px solid rgba(11,31,58,0.13);border-radius:var(--r);padding:14px 12px;position:relative;overflow:hidden;transition:var(--tr)}
 .mv-card::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;background:linear-gradient(180deg,var(--gold),var(--gold-lt))}
