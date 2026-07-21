@@ -220,7 +220,7 @@ body::after{
 /* ══════════════════════════════════════════
    ABOUT
 ══════════════════════════════════════════ */
-#about{background: linear-gradient(180deg, #D8E9F8 0%, #C4DAEA 100%);padding-top:40px;padding-bottom:44px}
+#about{background: linear-gradient(180deg, #D8E9F8 0%, #C4DAEA 100%);padding-top:40px;padding-bottom:44px;min-height:auto;scroll-snap-align:none}
 .about-intro{display:grid;grid-template-columns:1fr;gap:22px;align-items:center;margin-bottom:14px}
 
 /* Logo box — rich navy panel with gold accent border */
@@ -263,43 +263,43 @@ body::after{
 .state-vendor-badge{
   margin:10px auto 0;
   width:100%;
-  max-width:760px;
-  padding:10px 12px;
+  max-width:100%;
+  padding:6px 9px;
   border:1px solid rgba(11,31,58,.16);
-  border-left:3px solid var(--gold);
-  border-radius:9px;
+  border-left:2px solid var(--gold);
+  border-radius:8px;
   background:linear-gradient(165deg, rgba(255,255,255,.62) 0%, rgba(240,248,255,.8) 100%);
-  box-shadow:0 4px 12px rgba(11,31,58,.06);
+  box-shadow:0 3px 9px rgba(11,31,58,.05);
   display:grid;
-  gap:5px;
+  gap:2px;
   text-align:center;
 }
 .svb-kicker{
   font-family:var(--fD);
-  font-size:.86rem;
+  font-size:.73rem;
   font-weight:700;
   color:var(--navy);
-  line-height:1.2;
+  line-height:1.1;
   margin:0;
-  padding-bottom:3px;
+  padding-bottom:1px;
   border-bottom:1px solid rgba(11,31,58,.14);
 }
-.svb-meta{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap}
+.svb-meta{display:flex;align-items:center;justify-content:center;gap:5px;flex-wrap:wrap}
 .svb-text{
-  font-size:.72rem;
+  font-size:.6rem;
   color:var(--txt-mid);
-  line-height:1.35;
+  line-height:1.2;
   margin:0;
   flex:1 1 280px;
 }
 .svb-code{
-  font-size:.62rem;
+  font-size:.51rem;
   color:var(--txt-light);
-  letter-spacing:.025em;
+  letter-spacing:.015em;
   text-transform:uppercase;
   margin:0;
   flex:0 0 auto;
-  padding-left:8px;
+  padding-left:5px;
   border-left:1px solid rgba(11,31,58,.18);
 }
 .svb-code strong{
@@ -312,13 +312,13 @@ body::after{
   .state-vendor-badge{
     width:100%;
     max-width:100%;
-    padding:9px 10px;
-    gap:4px;
+    padding:6px 7px;
+    gap:2px;
   }
-  .svb-kicker{font-size:.78rem;padding-bottom:2px}
+  .svb-kicker{font-size:.68rem;padding-bottom:1px}
   .svb-meta{display:block;text-align:center}
-  .svb-text{font-size:.66rem;line-height:1.35;margin-bottom:3px}
-  .svb-code{font-size:.57rem;border-left:none;padding-left:0}
+  .svb-text{font-size:.58rem;line-height:1.22;margin-bottom:1px}
+  .svb-code{font-size:.5rem;border-left:none;padding-left:0}
 }
 
 .mv-cards{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:28px}
