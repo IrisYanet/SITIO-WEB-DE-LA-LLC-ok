@@ -220,8 +220,8 @@ body::after{
 /* ══════════════════════════════════════════
    ABOUT
 ══════════════════════════════════════════ */
-#about{background: linear-gradient(180deg, #D8E9F8 0%, #C4DAEA 100%);padding-top:40px;padding-bottom:44px;min-height:auto;scroll-snap-align:none}
-.about-intro{display:grid;grid-template-columns:1fr;gap:22px;align-items:center;margin-bottom:14px}
+#about{background: linear-gradient(180deg, #D8E9F8 0%, #C4DAEA 100%);padding-top:40px;padding-bottom:40px;min-height:auto;scroll-snap-align:none}
+.about-intro{display:grid;grid-template-columns:1fr;gap:18px;align-items:center;margin-bottom:12px;max-width:100%;margin-left:auto;margin-right:auto}
 
 /* Logo box — rich navy panel with gold accent border */
 .about-logo-box{
@@ -261,39 +261,39 @@ body::after{
 .about-text p:last-child{margin-bottom:0}
 
 .state-vendor-badge{
-  margin:10px auto 0;
+  margin:8px auto 10px;
   width:100%;
-  max-width:100%;
-  padding:6px 9px;
+  max-width:560px;
+  padding:5px 8px;
   border:1px solid rgba(11,31,58,.16);
   border-left:2px solid var(--gold);
   border-radius:8px;
   background:linear-gradient(165deg, rgba(255,255,255,.62) 0%, rgba(240,248,255,.8) 100%);
-  box-shadow:0 3px 9px rgba(11,31,58,.05);
+  box-shadow:0 2px 7px rgba(11,31,58,.05);
   display:grid;
-  gap:2px;
+  gap:1px;
   text-align:center;
 }
 .svb-kicker{
   font-family:var(--fD);
-  font-size:.73rem;
+  font-size:.67rem;
   font-weight:700;
   color:var(--navy);
-  line-height:1.1;
+  line-height:1.05;
   margin:0;
   padding-bottom:1px;
   border-bottom:1px solid rgba(11,31,58,.14);
 }
 .svb-meta{display:flex;align-items:center;justify-content:center;gap:5px;flex-wrap:wrap}
 .svb-text{
-  font-size:.6rem;
+  font-size:.55rem;
   color:var(--txt-mid);
-  line-height:1.2;
+  line-height:1.15;
   margin:0;
-  flex:1 1 280px;
+  flex:1 1 240px;
 }
 .svb-code{
-  font-size:.51rem;
+  font-size:.47rem;
   color:var(--txt-light);
   letter-spacing:.015em;
   text-transform:uppercase;
@@ -312,13 +312,14 @@ body::after{
   .state-vendor-badge{
     width:100%;
     max-width:100%;
-    padding:6px 7px;
+    padding:5px 6px;
     gap:2px;
+    margin:8px auto;
   }
-  .svb-kicker{font-size:.68rem;padding-bottom:1px}
+  .svb-kicker{font-size:.64rem;padding-bottom:1px}
   .svb-meta{display:block;text-align:center}
-  .svb-text{font-size:.58rem;line-height:1.22;margin-bottom:1px}
-  .svb-code{font-size:.5rem;border-left:none;padding-left:0}
+  .svb-text{font-size:.54rem;line-height:1.18;margin-bottom:1px}
+  .svb-code{font-size:.47rem;border-left:none;padding-left:0}
 }
 
 .mv-cards{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:28px}
@@ -332,7 +333,7 @@ body::after{
 /* ══════════════════════════════════════════
    SERVICES
 ══════════════════════════════════════════ */
-#services{background:var(--alice);padding-top:40px;padding-bottom:20px}
+#services{background:var(--alice);padding-top:40px;padding-bottom:40px}
 #services .text-center{margin-bottom:16px !important}
 .services-click-alert{
   max-width:780px;
@@ -384,7 +385,7 @@ body::after{
 /* ══════════════════════════════════════════
    DOCUMENTS
 ══════════════════════════════════════════ */
-#documents{background: linear-gradient(180deg, #D8E9F8 0%, #C4DAEA 100%);padding-top:40px}
+#documents{background: linear-gradient(180deg, #D8E9F8 0%, #C4DAEA 100%);padding-top:40px;padding-bottom:40px}
 .doc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;margin-top:36px}
 .doc-card{display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px;background:#D9E5F0;border:1px solid rgba(11,31,58,0.12);border-radius:var(--r-lg);padding:26px 18px;text-decoration:none;transition:var(--tr);position:relative;overflow:hidden}
 .doc-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--gold),var(--gold-lt))}
@@ -396,6 +397,37 @@ body::after{
 .doc-form-card{grid-column:1/-1;max-width:620px;margin:0 auto;text-align:left;align-items:stretch;padding:20px 16px}
 .doc-form-card .doc-title{font-size:1.04rem}
 .doc-form-card .doc-desc{font-size:.8rem;line-height:1.5;margin-bottom:4px}
+.doc-toggle-btn{
+  width:100%;
+  border:1px solid rgba(11,31,58,.16);
+  border-radius:10px;
+  background:linear-gradient(155deg,#EEF6FC 0%, #E2EDF7 100%);
+  color:var(--navy);
+  font-family:var(--fB);
+  font-size:.82rem;
+  font-weight:700;
+  text-align:left;
+  padding:10px 12px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  cursor:pointer;
+  transition:var(--tr);
+}
+.doc-toggle-btn:hover{background:linear-gradient(155deg,#F4FAFF 0%, #E7F2FC 100%);box-shadow:var(--shd-sm)}
+.doc-toggle-btn[aria-expanded="true"]{border-color:rgba(200,168,75,.5)}
+.doc-toggle-icon{font-size:1.1rem;line-height:1;color:var(--gold);font-weight:700;min-width:16px;text-align:center}
+.doc-request-panel{
+  margin-top:10px;
+  display:block;
+  max-height:0;
+  opacity:0;
+  overflow:hidden;
+  transform:translateY(-4px);
+  transition:max-height .28s ease, opacity .22s ease, transform .22s ease;
+}
+.doc-request-panel.is-open{max-height:1300px;opacity:1;transform:translateY(0)}
+.doc-request-panel[hidden]{display:block;pointer-events:none}
 .doc-form{display:grid;gap:8px;margin-top:6px}
 .doc-form-label{display:grid;gap:5px;font-size:.79rem;color:var(--txt-mid);font-weight:500}
 .doc-form-input{
@@ -427,8 +459,12 @@ body::after{
 /* ══════════════════════════════════════════
    CONTACT
 ══════════════════════════════════════════ */
-#contact{background:var(--alice);padding-top:40px;padding-bottom:22px;border-bottom:1px solid rgba(11,31,58,.12)}
+#contact{background:var(--alice);padding-top:40px;padding-bottom:40px;border-bottom:1px solid rgba(11,31,58,.12)}
 #contact .text-center{margin-bottom:14px !important}
+
+/* Keep core sections visually even while scrolling */
+#about,#services,#documents,#contact{min-height:auto;scroll-snap-align:none}
+#about .container,#services .container,#documents .container,#contact .container{max-width:1160px}
 .contact-grid{display:grid;grid-template-columns:1.2fr 0.9fr;gap:22px;align-items:stretch}
 .contact-grid > div:first-child{display:flex;flex-direction:column;justify-content:flex-start;min-height:100%;padding-bottom:0}
 .contact-item{display:flex;gap:10px;margin-bottom:12px;align-items:flex-start}
@@ -734,10 +770,7 @@ footer{background:var(--navy);color:rgba(255,255,255,.65);padding:32px 0 24px}
 @media(max-width:768px){
   html{scroll-snap-type:none}
   :root{--nav-offset:72px}
-  #about{padding-top:28px;padding-bottom:30px}
-  #services{padding-top:28px;padding-bottom:14px}
-  #documents{padding-top:28px}
-  #contact{padding-top:28px}
+  #about,#services,#documents,#contact{padding-top:28px;padding-bottom:28px}
   .section{padding:50px 0;min-height:auto;scroll-snap-align:none}
   .container{padding:0 16px}
 
@@ -772,12 +805,12 @@ footer{background:var(--navy);color:rgba(255,255,255,.65);padding:32px 0 24px}
   .cat-title{font-size:1.2rem}
   .doc-grid{grid-template-columns:1fr}
   .doc-form-card{max-width:580px;padding:18px 13px}
+  .doc-toggle-btn{font-size:.78rem;padding:9px 10px}
   .doc-form-label{font-size:.8rem}
   .doc-form-input{font-size:16px}
   .doc-submit-btn{width:100%}
 
   .contact-item{gap:8px;margin-bottom:10px}
-  #contact{padding-bottom:16px}
   .cta-block{padding:12px 12px}
   .cta-title{font-size:1.06rem}
   .contact-side{gap:10px}
@@ -804,10 +837,7 @@ footer{background:var(--navy);color:rgba(255,255,255,.65);padding:32px 0 24px}
 
 @media(max-width:480px){
   :root{--nav-offset:68px}
-  #about{padding-top:22px;padding-bottom:22px}
-  #services{padding-top:22px;padding-bottom:12px}
-  #documents{padding-top:22px}
-  #contact{padding-top:22px}
+  #about,#services,#documents,#contact{padding-top:22px;padding-bottom:22px}
   .nav-logo{max-width:64%}
   .nav-logo-name{font-size:.88rem;white-space:nowrap}
   .lang-toggle{padding:2px}

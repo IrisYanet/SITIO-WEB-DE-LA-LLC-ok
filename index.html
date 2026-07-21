@@ -111,8 +111,6 @@
         <span class="section-label" data-i18n="ab.lbl">Who We Are</span>
         <span class="gold-line c"></span>
         <h2 class="section-title" data-i18n="ab.title">The Bridge Between Two Communities</h2>
-        <p data-i18n="ab.p1">We understand the unique challenges that business owners face when navigating systems, regulations, and paperwork in a second language. Our team provides expert administrative support in both English and Spanish — so no opportunity is lost in translation.</p>
-        <p data-i18n="ab.p2">From entity formation to bookkeeping, government compliance to digital presence, we handle the complexity so you can focus on what you do best: growing your business.</p>
         <article class="state-vendor-badge" aria-label="State vendor verification">
           <p class="svb-kicker" data-i18n="ab.badge.title">State of Michigan Official Vendor</p>
           <div class="svb-meta">
@@ -120,6 +118,8 @@
             <p class="svb-code" data-i18n="ab.badge.code">Registered Vendor Code: <strong>VS0382073</strong></p>
           </div>
         </article>
+        <p data-i18n="ab.p1">We understand the unique challenges that business owners face when navigating systems, regulations, and paperwork in a second language. Our team provides expert administrative support in both English and Spanish — so no opportunity is lost in translation.</p>
+        <p data-i18n="ab.p2">From entity formation to bookkeeping, government compliance to digital presence, we handle the complexity so you can focus on what you do best: growing your business.</p>
       </div>
     </div>
     <div class="mv-cards">
@@ -244,6 +244,13 @@
         <div class="doc-title">Request Documents / Solicitar Documentos</div>
         <p class="doc-desc">Please complete this form to download your file. / Complete este formulario para descargar su archivo.</p>
 
+        <button id="doc-toggle-btn" class="doc-toggle-btn" type="button" aria-expanded="false" aria-controls="doc-request-panel">
+          <span id="doc-toggle-text" data-i18n="doc.req.toggle.open">Open Request Form / Abrir Solicitud</span>
+          <span class="doc-toggle-icon" aria-hidden="true">+</span>
+        </button>
+
+        <div id="doc-request-panel" class="doc-request-panel" hidden>
+
         <form id="documents-gate-form" class="doc-form" name="contact-documents" data-netlify="true" data-netlify-recaptcha="true" method="POST" netlify-honeypot="bot-field">
           <input type="hidden" name="form-name" value="contact-documents"/>
           <input type="hidden" name="subject" value="New Document Request / Nueva Solicitud de Documento"/>
@@ -284,6 +291,7 @@
         </form>
 
         <p id="documents-gate-message" class="doc-form-message" aria-live="polite"></p>
+        </div>
       </article>
     </div>
   </div>

@@ -48,6 +48,8 @@ en:{
 's5.3.t':'EN/ES','s5.3.n':'Simple Translations','s5.3.d':'Non-certified administrative and web copy translations (EN/ES).',
 'price.txt':'<strong>Pricing Note:</strong> Prices shown in the Official Price List are estimates. A formal Quote/Estimate will be provided after assessing the specific scope of your project. All rates are subject to the terms of the Master Service Agreement.',
 'doc.lbl':'Resources','doc.title':'Document Center','doc.sub':'Download our official documents to understand our terms, pricing, and service addendums.',
+'doc.req.toggle.open':'Open Request Form / Abrir Solicitud',
+'doc.req.toggle.close':'Hide Request Form / Ocultar Solicitud',
 'doc.msa.t':'Master Service Agreement','doc.msa.d':'Our complete terms of service, governing all professional relationships with clients.',
 'doc.add.t':'Service Addendum','doc.add.d':'Supplemental service terms and specific scope additions to the base agreement.',
 'doc.pri.t':'Official Price List','doc.pri.d':'Estimated pricing for all services. Subject to formal Quote/Estimate after scope review.',
@@ -113,6 +115,8 @@ es:{
 's5.3.t':'EN/ES','s5.3.n':'Traducciones Simples','s5.3.d':'Traducciones administrativas y de contenido web no certificadas (EN/ES).',
 'price.txt':'<strong>Nota de Precios:</strong> Los precios mostrados en la Lista de Precios Oficial son estimados. Se proporcionará una Cotización/Estimado formal después de evaluar el alcance específico de tu proyecto. Todas las tarifas están sujetas a los términos del Acuerdo Maestro de Servicios.',
 'doc.lbl':'Recursos','doc.title':'Centro de Documentos','doc.sub':'Descarga nuestros documentos oficiales para conocer nuestros términos, precios y adendas de servicio.',
+'doc.req.toggle.open':'Abrir solicitud de documentos',
+'doc.req.toggle.close':'Ocultar solicitud de documentos',
 'doc.msa.t':'Acuerdo Maestro de Servicios','doc.msa.d':'Nuestros términos de servicio completos que rigen todas las relaciones profesionales con clientes.',
 'doc.add.t':'Adenda de Servicio','doc.add.d':'Términos de servicio suplementarios y adiciones de alcance específicas al acuerdo base.',
 'doc.pri.t':'Lista de Precios Oficial','doc.pri.d':'Precios estimados para todos los servicios. Sujeto a Cotización/Estimado formal tras revisión de alcance.',
@@ -140,6 +144,7 @@ function applyLang(lang){
     const k=el.getAttribute('data-i18n');
     if(t[k]!==undefined) el.innerHTML=t[k];
   });
+  syncDocToggleLabel();
   document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.dataset.lang===lang));
   document.documentElement.lang=lang;
 }
@@ -218,6 +223,54 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',
 }));
 
 document.querySelectorAll('.lang-btn').forEach(b=>b.addEventListener('click',()=>applyLang(b.dataset.lang)));
+
+/* ── DOCUMENT REQUEST COLLAPSE ── */
+const docToggleBtn=document.getElementById('doc-toggle-btn');
+const docToggleText=document.getElementById('doc-toggle-text');
+const docToggleIcon=docToggleBtn?docToggleBtn.querySelector('.doc-toggle-icon'):null;
+const docRequestPanel=document.getElementById('doc-request-panel');
+let docPanelHideTimer=null;
+
+function syncDocToggleLabel(){
+  if(!docToggleBtn||!docToggleText) return;
+  const expanded=docToggleBtn.getAttribute('aria-expanded')==='true';
+  const k=expanded?'doc.req.toggle.close':'doc.req.toggle.open';
+  const t=T[currentLang]||T.en;
+  docToggleText.innerHTML=t[k]||T.en[k]||'';
+  if(docToggleIcon) docToggleIcon.textContent=expanded?'−':'+';
+}
+
+function toggleDocRequestPanel(){
+  if(!docToggleBtn||!docRequestPanel) return;
+  const expanded=docToggleBtn.getAttribute('aria-expanded')==='true';
+  const next=!expanded;
+  if(docPanelHideTimer){
+    clearTimeout(docPanelHideTimer);
+    docPanelHideTimer=null;
+  }
+  if(next){
+    docRequestPanel.hidden=false;
+    requestAnimationFrame(()=>docRequestPanel.classList.add('is-open'));
+    docToggleBtn.setAttribute('aria-expanded','true');
+    syncDocToggleLabel();
+    return;
+  }
+  docRequestPanel.classList.remove('is-open');
+  docToggleBtn.setAttribute('aria-expanded','false');
+  syncDocToggleLabel();
+  docPanelHideTimer=setTimeout(()=>{
+    docRequestPanel.hidden=true;
+    docPanelHideTimer=null;
+  },280);
+}
+
+if(docToggleBtn&&docRequestPanel){
+  docRequestPanel.hidden=true;
+  docRequestPanel.classList.remove('is-open');
+  docToggleBtn.setAttribute('aria-expanded','false');
+  syncDocToggleLabel();
+  docToggleBtn.addEventListener('click',toggleDocRequestPanel);
+}
 
 /* ── MAIL CLIENT CHOOSER ── */
 const _mailModal=document.getElementById('mail-chooser');
