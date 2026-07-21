@@ -261,39 +261,39 @@ body::after{
 .about-text p:last-child{margin-bottom:0}
 
 .state-vendor-badge{
-  margin:12px auto 0;
-  max-width:520px;
-  padding:10px 12px;
+  margin:10px auto 0;
+  max-width:460px;
+  padding:8px 10px;
   border:1px solid rgba(11,31,58,.16);
-  border-left:4px solid var(--gold);
-  border-radius:10px;
+  border-left:3px solid var(--gold);
+  border-radius:9px;
   background:linear-gradient(165deg, rgba(255,255,255,.62) 0%, rgba(240,248,255,.8) 100%);
-  box-shadow:0 6px 16px rgba(11,31,58,.07);
+  box-shadow:0 4px 12px rgba(11,31,58,.06);
 }
 .svb-kicker{
   font-family:var(--fD);
-  font-size:.94rem;
+  font-size:.86rem;
   font-weight:700;
   color:var(--navy);
   line-height:1.2;
-  margin-bottom:4px;
+  margin-bottom:3px;
 }
 .svb-text{
-  font-size:.77rem;
+  font-size:.71rem;
   color:var(--txt-mid);
-  line-height:1.45;
-  margin-bottom:4px;
+  line-height:1.35;
+  margin-bottom:3px;
 }
 .svb-code{
-  font-size:.68rem;
+  font-size:.63rem;
   color:var(--txt-light);
-  letter-spacing:.03em;
+  letter-spacing:.02em;
   text-transform:uppercase;
 }
 .svb-code strong{
   color:var(--navy);
   font-weight:700;
-  letter-spacing:.06em;
+  letter-spacing:.04em;
 }
 
 @media(max-width:768px){
@@ -714,12 +714,13 @@ footer{background:var(--navy);color:rgba(255,255,255,.65);padding:32px 0 24px}
 }
 
 @media(max-width:768px){
+  html{scroll-snap-type:none}
   :root{--nav-offset:72px}
   #about{padding-top:28px;padding-bottom:30px}
   #services{padding-top:28px;padding-bottom:14px}
   #documents{padding-top:28px}
   #contact{padding-top:28px}
-  .section{padding:50px 0}
+  .section{padding:50px 0;min-height:auto;scroll-snap-align:none}
   .container{padding:0 16px}
 
   #navbar{padding:8px 0}
