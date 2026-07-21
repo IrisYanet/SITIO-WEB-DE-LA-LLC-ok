@@ -263,20 +263,20 @@ body::after{
 .state-vendor-badge{
   margin:8px auto 10px;
   width:100%;
-  max-width:560px;
-  padding:5px 8px;
+  max-width:500px;
+  padding:4px 7px;
   border:1px solid rgba(11,31,58,.16);
   border-left:2px solid var(--gold);
-  border-radius:8px;
+  border-radius:7px;
   background:linear-gradient(165deg, rgba(255,255,255,.62) 0%, rgba(240,248,255,.8) 100%);
-  box-shadow:0 2px 7px rgba(11,31,58,.05);
+  box-shadow:0 2px 6px rgba(11,31,58,.05);
   display:grid;
   gap:1px;
   text-align:center;
 }
 .svb-kicker{
   font-family:var(--fD);
-  font-size:.67rem;
+  font-size:.64rem;
   font-weight:700;
   color:var(--navy);
   line-height:1.05;
@@ -284,23 +284,22 @@ body::after{
   padding-bottom:1px;
   border-bottom:1px solid rgba(11,31,58,.14);
 }
-.svb-meta{display:flex;align-items:center;justify-content:center;gap:5px;flex-wrap:wrap}
+.svb-meta{display:block;text-align:center}
 .svb-text{
-  font-size:.55rem;
+  font-size:.53rem;
   color:var(--txt-mid);
-  line-height:1.15;
+  line-height:1.14;
   margin:0;
-  flex:1 1 240px;
+  margin-bottom:1px;
 }
 .svb-code{
-  font-size:.47rem;
+  font-size:.45rem;
   color:var(--txt-light);
   letter-spacing:.015em;
   text-transform:uppercase;
   margin:0;
-  flex:0 0 auto;
-  padding-left:5px;
-  border-left:1px solid rgba(11,31,58,.18);
+  padding-left:0;
+  border-left:none;
 }
 .svb-code strong{
   color:var(--navy);
@@ -311,15 +310,15 @@ body::after{
 @media(max-width:768px){
   .state-vendor-badge{
     width:100%;
-    max-width:100%;
-    padding:5px 6px;
+    max-width:460px;
+    padding:4px 6px;
     gap:2px;
     margin:8px auto;
   }
-  .svb-kicker{font-size:.64rem;padding-bottom:1px}
+  .svb-kicker{font-size:.61rem;padding-bottom:1px}
   .svb-meta{display:block;text-align:center}
-  .svb-text{font-size:.54rem;line-height:1.18;margin-bottom:1px}
-  .svb-code{font-size:.47rem;border-left:none;padding-left:0}
+  .svb-text{font-size:.5rem;line-height:1.14;margin-bottom:1px}
+  .svb-code{font-size:.43rem;border-left:none;padding-left:0}
 }
 
 .mv-cards{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:28px}
