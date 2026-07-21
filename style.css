@@ -394,7 +394,7 @@ body::after{
 .doc-title{font-family:var(--fD);font-size:1.2rem;font-weight:700;color:var(--navy)}
 .doc-desc{font-size:.85rem;color:var(--txt-mid);line-height:1.6}
 
-.doc-form-card{grid-column:1/-1;max-width:620px;margin:0 auto;text-align:left;align-items:stretch;padding:20px 16px}
+.doc-form-card{grid-column:1/-1;max-width:620px;margin:0 auto 3rem;text-align:left;align-items:stretch;padding:20px 16px}
 .doc-form-card .doc-title{font-size:1.04rem}
 .doc-form-card .doc-desc{font-size:.8rem;line-height:1.5;margin-bottom:4px}
 .doc-toggle-btn{
