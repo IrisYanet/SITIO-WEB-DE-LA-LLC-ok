@@ -262,13 +262,17 @@ body::after{
 
 .state-vendor-badge{
   margin:10px auto 0;
-  max-width:460px;
-  padding:8px 10px;
+  width:100%;
+  max-width:760px;
+  padding:10px 12px;
   border:1px solid rgba(11,31,58,.16);
   border-left:3px solid var(--gold);
   border-radius:9px;
   background:linear-gradient(165deg, rgba(255,255,255,.62) 0%, rgba(240,248,255,.8) 100%);
   box-shadow:0 4px 12px rgba(11,31,58,.06);
+  display:grid;
+  gap:5px;
+  text-align:center;
 }
 .svb-kicker{
   font-family:var(--fD);
@@ -276,19 +280,27 @@ body::after{
   font-weight:700;
   color:var(--navy);
   line-height:1.2;
-  margin-bottom:3px;
+  margin:0;
+  padding-bottom:3px;
+  border-bottom:1px solid rgba(11,31,58,.14);
 }
+.svb-meta{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap}
 .svb-text{
-  font-size:.71rem;
+  font-size:.72rem;
   color:var(--txt-mid);
   line-height:1.35;
-  margin-bottom:3px;
+  margin:0;
+  flex:1 1 280px;
 }
 .svb-code{
-  font-size:.63rem;
+  font-size:.62rem;
   color:var(--txt-light);
-  letter-spacing:.02em;
+  letter-spacing:.025em;
   text-transform:uppercase;
+  margin:0;
+  flex:0 0 auto;
+  padding-left:8px;
+  border-left:1px solid rgba(11,31,58,.18);
 }
 .svb-code strong{
   color:var(--navy);
@@ -298,9 +310,15 @@ body::after{
 
 @media(max-width:768px){
   .state-vendor-badge{
+    width:100%;
     max-width:100%;
-    padding:10px;
+    padding:9px 10px;
+    gap:4px;
   }
+  .svb-kicker{font-size:.78rem;padding-bottom:2px}
+  .svb-meta{display:block;text-align:center}
+  .svb-text{font-size:.66rem;line-height:1.35;margin-bottom:3px}
+  .svb-code{font-size:.57rem;border-left:none;padding-left:0}
 }
 
 .mv-cards{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:28px}
